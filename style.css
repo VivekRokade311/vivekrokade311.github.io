@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f5f7;
+  background: #ffffff;
   color: #1d2433;
   line-height: 1.6;
 }
@@ -21,8 +21,9 @@ body {
 }
 
 .hero {
-  background: linear-gradient(135deg, #0b0b0b, #1b1b1b);
-  color: #ffffff;
+  background: #ffffff;
+  color: #111111;
+  border-bottom: 1px solid #e5e7eb;
   padding: 90px 0 80px;
   text-align: center;
 }
@@ -44,9 +45,9 @@ body {
 }
 
 .hero h1 {
-  margin: 0;
-  font-size: 56px;
-  line-height: 1.1;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .hero h2 {
@@ -84,8 +85,8 @@ body {
 }
 
 .btn-primary {
-  background: #ffffff;
-  color: #111111;
+  background: #111111;
+  color: #ffffff;
 }
 
 .btn-secondary {
