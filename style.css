@@ -1,13 +1,16 @@
 :root {
   --bg: #f8fafc;
+  --bg-hero: #f1f5f9;
   --surface: #ffffff;
-  --surface-soft: #f3f4f6;
+  --surface-soft: #f8fafc;
   --text: #0f172a;
   --text-soft: #475569;
   --muted: #64748b;
   --line: #e2e8f0;
-  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --accent: #0f172a;
+  --accent-hover: #1e293b;
   --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 12px;
@@ -39,6 +42,7 @@ img {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 .container {
@@ -47,9 +51,9 @@ a {
 }
 
 .hero {
-  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-hero) 100%);
   border-bottom: 1px solid var(--line);
-  padding: 56px 0 72px;
+  padding: 56px 0 56px;
 }
 
 .hero-inner {
@@ -71,7 +75,7 @@ a {
 
 .eyebrow {
   margin: 0 0 18px;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -90,8 +94,8 @@ a {
 .hero-role {
   margin: 18px 0 0;
   font-size: clamp(1.35rem, 2.5vw, 2rem);
-  font-weight: 600;
   line-height: 1.25;
+  font-weight: 600;
   color: var(--text);
 }
 
@@ -118,44 +122,33 @@ a {
   min-height: 50px;
   padding: 0 22px;
   border-radius: 999px;
-  border: 1px solid transparent;
-  text-decoration: none;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
   font-size: 0.98rem;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
 .btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
   transform: translateY(-1px);
 }
 
-.btn-primary {
-  background: var(--text);
+.btn:visited,
+.btn:active {
   color: #ffffff;
-  border-color: var(--text);
 }
 
-.btn-primary:hover {
-  background: #1e293b;
-  border-color: #1e293b;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--text);
-  border-color: #cbd5e1;
-}
-
-.btn-secondary:hover {
-  background: #ffffff;
-  border-color: #94a3b8;
+.btn-solid {
+  background: var(--accent);
+  color: #ffffff;
 }
 
 .metrics {
-  margin-top: -34px;
-  position: relative;
-  z-index: 2;
+  padding: 28px 0 0;
 }
 
 .metrics-grid {
@@ -166,7 +159,7 @@ a {
 
 .metric-card {
   background: var(--surface);
-  border: 1px solid rgba(226, 232, 240, 0.7);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
   padding: 28px 22px;
@@ -175,7 +168,7 @@ a {
 
 .metric-card h2 {
   margin: 0 0 8px;
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: clamp(2rem, 3vw, 2.5rem);
   line-height: 1;
   font-weight: 800;
   color: var(--text);
@@ -193,7 +186,7 @@ a {
 
 .card {
   background: var(--surface);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   padding: 42px;
@@ -254,7 +247,7 @@ a {
 
 .expertise-box {
   background: var(--surface-soft);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 24px;
 }
@@ -317,9 +310,9 @@ a {
 }
 
 .site-footer {
+  margin-top: 34px;
   background: #0f172a;
   color: #ffffff;
-  margin-top: 34px;
 }
 
 .site-footer .container {
@@ -345,7 +338,7 @@ a {
 
 @media (max-width: 680px) {
   .hero {
-    padding: 44px 0 60px;
+    padding: 44px 0 44px;
   }
 
   .profile-photo {
@@ -364,7 +357,7 @@ a {
   }
 
   .metrics {
-    margin-top: 22px;
+    padding-top: 22px;
   }
 
   .metrics-grid {
