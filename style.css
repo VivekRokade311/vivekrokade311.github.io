@@ -374,9 +374,9 @@ a {
   }
 
   .profile-photo {
-    width: 96px;
-    height: 96px;
-  }
+  width: 100px !important;
+  height: 100px !important;
+}
 
   .eyebrow {
     font-size: 0.76rem;
